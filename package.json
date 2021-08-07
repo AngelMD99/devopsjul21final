@@ -1,0 +1,25 @@
+{
+  "name": "devopsjul21final",
+  "version": "1.0.0",
+  "description": "web app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngelMD99/devopsjul21final.git"
+  },
+  "keywords": [
+    "web"
+  ],
+  "author": "angelmd",
+  "license": "ITE",
+  "bugs": {
+    "url": "https://github.com/AngelMD99/devopsjul21final/issues"
+  },
+  "homepage": "https://github.com/AngelMD99/devopsjul21final#readme",
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}
