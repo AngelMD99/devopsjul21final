@@ -4,3 +4,5 @@ function total (a){
 }
 
 module.exports = total
+
+
