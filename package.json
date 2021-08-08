@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/AngelMD99/devopsjul21final#readme",
   "dependencies": {
-    "express": "4.17.1",
+    "express": "4.17.1"
+  },
+  "DevDependencies:"{
     "jest": "27.0.6"
   }
 }
