@@ -3,7 +3,7 @@ const app = express()
 const port = (process.env.PORT || 4300)
 
 app.get("/",(req,res)=>{
-    res.send("Hola mi aplicacion personalizada de node")
+    res.send("Aplicación de Java Script")
 })
 
 app.listen(port)
