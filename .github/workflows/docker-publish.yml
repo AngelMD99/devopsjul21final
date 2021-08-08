@@ -29,6 +29,8 @@ jobs:
     permissions:
       contents: read
       packages: write
+    
+    needs: test
 
     steps:
       - name: Checkout repository
@@ -61,3 +63,24 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+  
+  test:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write  
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install
+      - run: npm test
+      
+
+

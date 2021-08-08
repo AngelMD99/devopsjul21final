@@ -11,3 +11,5 @@ test('verificar suma de costo de envío, prueba 2', ()=> {
     expect(total(245)).toBe(270)
 
 } )
+
+
