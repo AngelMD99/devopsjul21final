@@ -23,7 +23,7 @@
   "dependencies": {
     "express": "4.17.1"
   },
-  "DevDependencies:" {
+  "DevDependencies": {
     "jest": "27.0.6"
   }
 }
