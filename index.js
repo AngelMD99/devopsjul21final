@@ -1,9 +1,54 @@
 const express = require("express")
-const app = express()
-const port = (process.env.PORT || 4300)
+const createError = require("http-errors")
 
-app.get("/",(req,res)=>{
-    res.send("Aplicación de Java Script")
-})
+function createApp(database){    
+    
 
-app.listen(port)
+    const app = express()
+    app.use(express.json());
+
+    app.get("/",(req,res)=>{
+        res.send("Hi, this a javacscript application.")
+    });
+    
+    
+    app.post("/authenticate",(req,res,next)=>{
+        
+        username = req.body.username
+        password = req.body.password
+
+        user = database.getUser(username,password)
+        
+        if(user == null){
+            return next(createError(404,'User not found'))
+        }else{
+            return res.json(user)
+        }
+    })
+
+    return app
+}
+
+
+module.exports = createApp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
