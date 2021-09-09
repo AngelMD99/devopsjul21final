@@ -10,7 +10,7 @@ const index = createApp({
 describe('User register in API testing',()=>{
     it('should run', ()=>{});
 
-    it('POST /authenticate --> should return 404 when user is not in database', ()=>{
+    it('POST /authenticate --> should return 404 when user is not registered in database', ()=>{
         getUser.mockClear()
         getUser.mockReturnValue(null)
 

@@ -8,7 +8,7 @@ function createApp(database){
     app.use(express.json());
 
     app.get("/",(req,res)=>{
-        res.send("Hi, this a javacscript application.")
+        res.send("Hi, this a javascript application.")
     });
     
     
